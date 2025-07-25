@@ -1,21 +1,7 @@
-import asyncio
 import time
 from functools import wraps
 
 from loguru import logger
-
-
-def run_async_task(func):
-    try:
-        loop = asyncio.get_event_loop()
-        if loop.is_running():
-            loop.create_task(func())
-        else:
-            loop.run_until_complete(func())
-    except RuntimeError:
-        loop = asyncio.new_event_loop()
-        asyncio.set_event_loop(loop)
-        loop.run_until_complete(func())
 
 
 def async_timeit(func):
