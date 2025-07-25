@@ -1,6 +1,6 @@
 [project]
 name = "timing-utils"
-version = "0.1.2"
+version = "0.1.3"
 description = "Simple utilities to time synchronous and asynchronous Python functions."
 readme = "README.md"
 requires-python = ">=3.8"
@@ -13,8 +13,8 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/tuusuario/timing-utils"
-Repository = "https://github.com/tuusuario/timing-utils"
+Homepage = "https://github.com/tyrbok/timing-utils"
+Repository = "https://github.com/tyrbok/timing-utils"
 
 [project.optional-dependencies]
 dev = [
