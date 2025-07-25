@@ -1,6 +1,6 @@
 [project]
 name = "timing-utils"
-version = "0.1.0"
+version = "0.1.1"
 description = "Simple utilities to time synchronous and asynchronous Python functions."
 readme = "README.md"
 requires-python = ">=3.8"
