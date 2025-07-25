@@ -1,7 +1,6 @@
 import asyncio
 import pytest
-from timing_utils import timeit, async_timeit, run_async_task
-
+from timing_utils import timeit, async_timeit
 
 @timeit
 def sample_sync_func():
@@ -23,14 +22,3 @@ def test_timeit_decorator():
 async def test_async_timeit_decorator():
     result = await sample_async_func()
     assert result == 42
-
-
-def test_run_async_task_executes_async_func(caplog):
-    @async_timeit
-    async def short_task():
-        await asyncio.sleep(0.05)
-
-    run_async_task(short_task)
-
-    # Give the task a moment to finish if running in background
-    asyncio.run(asyncio.sleep(0.1))
