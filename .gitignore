@@ -47,3 +47,4 @@ Thumbs.db
 
 # Ejemplo de configuración no repositada
 locust_config.json
+/uv.lock

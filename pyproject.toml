@@ -6,11 +6,9 @@ readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "MIT" }
 authors = [
-  { name = "Jesus Serrano", email = "jesus@onepointzero.org" }
+    { name = "Jesus Serrano", email = "jesus@onepointzero.org" }
 ]
-dependencies = [
-  "loguru>=0.7.0"
-]
+dependencies = []
 
 [project.urls]
 Homepage = "https://github.com/tyrbok/timing-utils"
@@ -18,12 +16,15 @@ Repository = "https://github.com/tyrbok/timing-utils"
 
 [project.optional-dependencies]
 dev = [
-  "pytest>=8.1",
-  "pytest-asyncio",
-  "ruff",
-  "build",
-  "twine",
-  "tox>=4.0"
+    "pytest>=8.1",
+    "pytest-asyncio",
+    "ruff",
+    "build",
+    "twine",
+    "tox>=4.0"
+]
+loguru = [
+    "loguru>=0.7.0"
 ]
 
 [build-system]
@@ -34,7 +35,7 @@ build-backend = "hatchling.build"
 addopts = "-ra"
 testpaths = ["test"]
 markers = [
-  "asyncio: mark a test as asyncio-compatible"
+    "asyncio: mark a test as asyncio-compatible"
 ]
 
 [tool.ruff]
